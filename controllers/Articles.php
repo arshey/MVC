@@ -8,4 +8,10 @@ class Articles extends Controller{
         $this->render('index', compact('articles'));
     }
 
+    public function lire($slug){
+        $this->loadModel('Article');
+        $article = $this->Article->findBySlug($slug);
+        $this->render('lire', compact('article'));
+    }
+
 }

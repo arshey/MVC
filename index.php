@@ -20,11 +20,16 @@ if($params[0] != ""){
 
      //'method_exists' permet de vérifier si une méthode existe dans le controller
      if(method_exists($controller, $action)){
-        $controller->$action();// En gros normallement en POO on devrait avoir $articles->index() mais vu que tout ceux ci son optionnel alors on opte pour ceux présent
+
+         unset($params[0]);
+         unset($params[1]);
+         call_user_func_array([$controller, $action], $params);
+
+        // En gros normallement en POO on devrait avoir $articles->index() mais vu que tout ceux ci son optionnel alors on opte pour ceux présent
+        //$controller->$action();
      }else{
         http_response_code(404);
         echo "error 404 <br> Page not found! <br>";
-        echo "l'action  \"".strtoupper($params[1])."\" n'existe pas dans le controller " .strtoupper($params[0]);
     } 
 
      
