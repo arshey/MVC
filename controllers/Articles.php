@@ -1,11 +1,11 @@
 <?php
-class Articles{
+class Articles extends Controller{
 
     public function index(){
-        echo "Bienvenue sur mon routeur";
+        $this->loadModel("Article");
+        $articles = $this->Article->getAll();
+
+        $this->render('index', compact('articles'));
     }
 
-    public function read(){
-        echo "Ici c'est la fonction read()";
-    }
 }

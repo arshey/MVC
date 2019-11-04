@@ -2,6 +2,8 @@
 //On génère une constante qui contiendra le chemin vers index.php
 define('ROOT', str_replace('index.php', '', $_SERVER['SCRIPT_FILENAME']));//cette ligne nous permet tout simplement de supprimer index.php lorsqu'on appelera $_SERVER['SCRIPT_FILENAME']
 
+require_once(ROOT.'app/Model.php');
+require_once(ROOT.'app/Controller.php');
 
 //On sépare les paramètres
 $params = explode('/', $_GET['p']);
@@ -23,7 +25,7 @@ if($params[0] != ""){
         http_response_code(404);
         echo "error 404 <br> Page not found! <br>";
         echo "l'action  \"".strtoupper($params[1])."\" n'existe pas dans le controller " .strtoupper($params[0]);
-    }
+    } 
 
      
 }else{
