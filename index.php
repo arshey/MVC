@@ -6,7 +6,7 @@ define('ROOT', str_replace('index.php', '', $_SERVER['SCRIPT_FILENAME']));//cett
 //On sépare les paramètres
 $params = explode('/', $_GET['p']);
 
-//Est-ce qu'un paramètre existe
+//S'il y'a un paramètre passé en URL
 if($params[0] != ""){
      $controller = ucfirst($params[0]); //ucfirst met la première valeur en Majuscule
      
@@ -23,10 +23,11 @@ if($params[0] != ""){
         http_response_code(404);
         echo "error 404 <br> Page not found! <br>";
         echo "l'action  \"".strtoupper($params[1])."\" n'existe pas dans le controller " .strtoupper($params[0]);
-     }
+    }
 
      
 }else{
 
+    echo "Bienvenue";
 
 }
