@@ -1,0 +1,13 @@
+{
+    "name": "vincent/mvc",
+    "description": "Demo of MVC",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Vincent-Férié",
+            "email": "arshey@live.fr"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}

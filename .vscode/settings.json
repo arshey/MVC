@@ -1,13 +1,13 @@
 {
-    "sqltools.connections": [
-        {
-            "database": "MVC",
-            "dialect": "MySQL",
-            "name": "localhost",
-            "password": "root",
-            "port": 3306,
-            "server": "localhost",
-            "username": "root"
-        }
-    ]
+  "sqltools.connections": [
+    {
+      "database": "MVC",
+      "dialect": "MySQL",
+      "name": "localhost",
+      "password": "root",
+      "port": 3306,
+      "server": "localhost",
+      "username": "root"
+    }
+  ]
 }
