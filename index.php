@@ -35,6 +35,6 @@ if($params[0] != ""){
      
 }else{
 
-    echo "Bienvenue";
+    echo "BIENVENUE SUR MON MVC 🤗";
 
 }
