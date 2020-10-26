@@ -1,6 +1,6 @@
 # Model View Controller (MVC)
 
-Ce dépôt à été créer pour mes auditeurs qui me demandait comment mettre en place une ossature MVC. 
+Ce dépôt à été créer pour mes auditeurs qui me demandaient comment mettre en place une ossature MVC. 
 
 Historiquement, PHP est un langage _glue_, il peut être intégré avec le langage de balisage [HTML](https://fr.wikibooks.org/wiki/Le_langage_HTML "Le langage HTML"). L'avantage est cette simplicité de mise-en-oeuvre mais l'inconvénient est le mélange entre le traitement et l'affichage. Pour produire une application web claire et facile à entretenir, on peut séparer les différentes parties de l'application selon l'architecture [Modèle-Vue-Contrôleur](https://fr.wikipedia.org/wiki/Mod%C3%A8le-Vue-Contr%C3%B4leur "w:Modèle-Vue-Contrôleur") (ou MVC).
  1.  Modélisation (Modèle : Partie métier spécifique à l'application)
