@@ -14,7 +14,7 @@ if($params[0] != ""){
      
      $action = isset($params[1]) ? $params[1] : 'index';//Ici on va recupérer le second paramètre passer en url
 
-     require_once(ROOT.'controllers/'.$controller.'.php');//Cette ligne part du serveur et rendre dans le dossier controller puis sélectionne le controller qui s'y trouve 
+     require_once(ROOT.'controllers/'.$controller.'.php');//Cette ligne part du serveur et rentre dans le dossier controller puis sélectionne le controller qui s'y trouve 
 
      $controller = new $controller();//On va tout simplement maintenant instancier le controller  Ex: articles = new Articles()
 
@@ -25,7 +25,7 @@ if($params[0] != ""){
          unset($params[1]);
          call_user_func_array([$controller, $action], $params);
 
-        // En gros normallement en POO on devrait avoir $articles->index() mais vu que tout ceux ci son optionnel alors on opte pour ceux présent
+        // En gros normallement en POO on devrait avoir $articles->index() mais vu que tout ceux ci son optionnels alors on opte pour ceux présents
         //$controller->$action();
      }else{
         http_response_code(404);
